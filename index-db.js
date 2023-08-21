@@ -3,7 +3,6 @@ var app = express();
 var mysql = require("mysql2");
 var con = mysql.createConnection({ host: process.env.MYSQL_HOST, user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, database: process.env.MYSQL_DATABASE});
 
-// mysql code
 
 con.connect(function(err){
   if(err){
@@ -15,6 +14,8 @@ con.connect(function(err){
     if(err) throw err;
   });
 });
+
+// above is mysql code
 
 // Request handling
 app.get('/', function (req, res) {
